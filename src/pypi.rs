@@ -63,7 +63,7 @@ pub enum PypiCli {
 
 impl PypiCli {
     pub fn run(&self) {
-        let pip = crate::helper::get_cmd_path("pip");
+        let pip = crate::helper::get_cmd_path("pip3");
 
         match self {
             PypiCli::Get => {
