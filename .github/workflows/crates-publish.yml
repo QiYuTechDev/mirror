@@ -1,0 +1,19 @@
+name: Upload Package To Rust Crates
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build and publish
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          cargo publish --token $TOKEN
