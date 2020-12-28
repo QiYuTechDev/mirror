@@ -23,7 +23,7 @@ pub fn get_cmd_path(cmd: &str) -> String {
     match which::which(cmd) {
         Ok(o) => o.to_str().unwrap().to_owned(),
         Err(e) => {
-            eprintln!("无法找到 {} 命令! 错误: {}", cmd, e);
+            eprintln!("无法找到 {} 命令! 错误信息: {:?}", cmd, e);
             std::process::exit(1);
         }
     }

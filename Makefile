@@ -9,5 +9,8 @@ fix:
 install:
 	cargo install --path .
 
+format:
+	cargo fmt
+
 clean:
 	cargo clean

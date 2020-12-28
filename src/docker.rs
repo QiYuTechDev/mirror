@@ -2,7 +2,7 @@ use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 pub enum DockerMirror {
-    /// microsfot Azure
+    /// microsoft Azure
     Azure,
     /// docker 中国区镜像
     DockerChina,
