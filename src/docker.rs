@@ -4,6 +4,9 @@ use structopt::StructOpt;
 pub enum DockerMirror {
     /// microsoft Azure
     Azure,
+    /// 道客网络 镜像
+    /// https://www.daocloud.io/mirror
+    DaoCloud,
     /// docker 中国区镜像
     DockerChina,
     /// 网易镜像
@@ -16,6 +19,7 @@ impl DockerMirror {
     pub fn get_mirror(&self) -> &'static str {
         match self {
             DockerMirror::Azure => "https://dockerhub.azk8s.cn",
+            DockerMirror::DaoCloud => "http://f1361db2.m.daocloud.io",
             DockerMirror::DockerChina => "https://registry.docker-cn.com",
             DockerMirror::Netease => "http://hub-mirror.c.163.com",
             DockerMirror::Ustc => "https://docker.mirrors.ustc.edu.cn",
