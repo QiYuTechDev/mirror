@@ -33,7 +33,6 @@ jobs:
           prerelease: false
 
       - name: Upload Linux & macOS Asset
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         if: strategy.os != 'windows-2019'
         env:
@@ -44,7 +43,6 @@ jobs:
           asset_name: mirror
 
       - name: Upload Windows Asset
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         if: strategy.os == 'windows-2019'
         env:
