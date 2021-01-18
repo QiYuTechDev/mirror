@@ -7,6 +7,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
+  BINARY_NAME: mirror
 
 jobs:
   build:
@@ -39,8 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/release
-          asset_name: mirror
+          asset_path: ./target/release/${{ BINARY_NAME }}
+          asset_name: ${{ strategy.os }}${{ BINARY_NAME }}
           asset_content_type: application/binary
 
       - name: Upload Windows Asset
@@ -50,6 +51,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/release
-          asset_name: mirror.exe
+          asset_path: ./target/release/${{ BINARY_NAME }}.exe
+          asset_name: ${{ BINARY_NAME }}.exe
           asset_content_type: application/binary
