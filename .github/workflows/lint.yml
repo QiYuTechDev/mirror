@@ -1,4 +1,4 @@
-name: Cross
+name: Rust Lint
 
 on:
   push:
@@ -17,10 +17,7 @@ jobs:
         os: [ macos-latest, windows-latest, ubuntu-latest ]
     steps:
       - uses: actions/checkout@v2
-      - name: rust version
+      - name: Rust Version
         run: rustc --version
-      - name: install cross
-        run: cargo install cross
-      - name: cross build
-        run: cross build --verbose
-
+      - name: Lint
+        run: cargo clippy --verbose  -- -D warnings
