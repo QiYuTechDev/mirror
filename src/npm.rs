@@ -7,6 +7,9 @@ pub enum NpmMirror {
     Official,
     /// 淘宝镜像
     Taobao,
+    /// 华为云镜像
+    /// 官网: https://mirrors.huaweicloud.com/
+    HuaWei,
 }
 
 impl NpmMirror {
@@ -14,6 +17,7 @@ impl NpmMirror {
         match self {
             NpmMirror::Official => "https://registry.npmjs.org/",
             NpmMirror::Taobao => "https://registry.npm.taobao.org/",
+            NpmMirror::HuaWei => "https://repo.huaweicloud.com/repository/npm/",
         }
     }
 }

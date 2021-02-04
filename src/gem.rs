@@ -9,6 +9,9 @@ pub enum GemMirror {
     /// 清华大学(tuna)镜像
     /// doc: https://mirrors.tuna.tsinghua.edu.cn/help/rubygems/
     Tuna,
+    /// 华为云镜像
+    /// 官网: https://mirrors.huaweicloud.com/
+    HuaWei,
 }
 
 impl GemMirror {
@@ -17,6 +20,7 @@ impl GemMirror {
             GemMirror::Official => "https://rubygems.org/",
             GemMirror::Aliyun => "https://mirrors.aliyun.com/rubygems/",
             GemMirror::Tuna => "https://mirrors.tuna.tsinghua.edu.cn/rubygems/",
+            GemMirror::HuaWei => "https://repo.huaweicloud.com/ruby/ruby/",
         }
     }
 }

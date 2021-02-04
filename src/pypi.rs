@@ -15,6 +15,9 @@ pub enum PypiMirror {
     /// 清华(tuna)大学镜像
     /// doc: https://mirrors.tuna.tsinghua.edu.cn/help/pypi/
     Tuna,
+    /// 华为云镜像
+    /// 官网: https://mirrors.huaweicloud.com/
+    HuaWei,
 }
 
 impl PypiMirror {
@@ -24,6 +27,7 @@ impl PypiMirror {
             PypiMirror::Aliyun => "https://mirrors.aliyun.com/pypi/simple",
             PypiMirror::Netease => "https://mirrors.163.com/pypi/simple",
             PypiMirror::Tuna => "https://pypi.tuna.tsinghua.edu.cn/simple",
+            PypiMirror::HuaWei => "https://repo.huaweicloud.com/python/",
         }
     }
 }

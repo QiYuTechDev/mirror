@@ -6,6 +6,9 @@ pub enum YarnMirror {
     Official,
     /// 使用淘宝的镜像
     Taobao,
+    /// 华为云镜像
+    /// 官网: https://mirrors.huaweicloud.com/
+    HuaWei,
 }
 
 impl YarnMirror {
@@ -13,6 +16,7 @@ impl YarnMirror {
         match self {
             YarnMirror::Official => "https://registry.yarnpkg.com",
             YarnMirror::Taobao => "https://registry.npm.taobao.org",
+            YarnMirror::HuaWei => "https://repo.huaweicloud.com/yarn/",
         }
     }
 }

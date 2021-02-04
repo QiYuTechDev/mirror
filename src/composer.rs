@@ -6,6 +6,9 @@ pub enum ComposerMirror {
     Official,
     /// 阿里云 composer 镜像
     Aliyun,
+    /// 华为云镜像
+    /// 官网: https://mirrors.huaweicloud.com/
+    HuaWei,
 }
 
 impl ComposerMirror {
@@ -13,6 +16,7 @@ impl ComposerMirror {
         match self {
             ComposerMirror::Official => "https://repo.packagist.org",
             ComposerMirror::Aliyun => "https://mirrors.aliyun.com/composer/",
+            ComposerMirror::HuaWei => "https://repo.huaweicloud.com/repository/php/",
         }
     }
 }
