@@ -12,6 +12,8 @@ pub enum MirrorCli {
     /// 清华镜像
     #[structopt(name = "tuna")]
     Tuna,
+    /// 华为云镜像
+    HuaWei,
 }
 
 impl MirrorCli {
@@ -20,6 +22,7 @@ impl MirrorCli {
             MirrorCli::AliYun => println!("https://developer.aliyun.com/mirror/"),
             MirrorCli::NetEase => println!("https://mirrors.163.com/"),
             MirrorCli::Tuna => println!("https://mirrors.tuna.tsinghua.edu.cn/"),
+            MirrorCli::HuaWei => println!("https://mirrors.huaweicloud.com/"),
         }
     }
 }
