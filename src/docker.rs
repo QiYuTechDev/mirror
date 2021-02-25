@@ -13,6 +13,9 @@ pub enum DockerMirror {
     Netease,
     /// 中国科技大学
     Ustc,
+    /// 腾讯云镜像
+    /// doc: https://cloud.tencent.com/document/product/1207/45596
+    Tencent,
 }
 
 impl DockerMirror {
@@ -23,6 +26,7 @@ impl DockerMirror {
             DockerMirror::DockerChina => "https://registry.docker-cn.com",
             DockerMirror::Netease => "http://hub-mirror.c.163.com",
             DockerMirror::Ustc => "https://docker.mirrors.ustc.edu.cn",
+            DockerMirror::Tencent => "https://mirror.ccs.tencentyun.com",
         }
     }
 }
