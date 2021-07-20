@@ -20,4 +20,4 @@ cargo install mirror-cli
 
 ## 警告
 
-可执行文件为: `mirror`, NOT `mirror-cli`
+可执行文件为: `mirror`, 不是 `mirror-cli`
